@@ -84,6 +84,9 @@ document.addEventListener("keydown", function (event) {
         playerRow--;
         if (map[playerRow][playerCell] == "W") {
             playerRow++;
+            // blocking hybrid cell mvt
+        } else if (map[playerRow][playerCell] == "X") {
+            playerRow++;
         } else {
             playerDiv.style.top = (pixelsFromTop - 22) + "px";
         }     
@@ -93,6 +96,9 @@ document.addEventListener("keydown", function (event) {
         playerCell--;
         if (map[playerRow][playerCell] == "W"){
             playerCell++;  
+            // blocking hybrid cell mvt
+        } else if (map[playerRow][playerCell] == "X") {
+            playerCell++; 
         } else {
         playerDiv.style.left = (pixelsFromLeft - 22) + "px";  
         }
@@ -102,6 +108,9 @@ document.addEventListener("keydown", function (event) {
         playerRow++;
         if (map[playerRow][playerCell] == "W") {
             playerRow--;
+            // blocking hybrid cell mvt
+        } else if (map[playerRow][playerCell] == "X") {
+            playerRow++;        
         } else {
         playerDiv.style.top = (pixelsFromTop + 22) + "px";
         }     
@@ -111,6 +120,9 @@ document.addEventListener("keydown", function (event) {
         playerCell++;
         if (map[playerRow][playerCell] == "W") {
             playerCell--;
+            // blocking hybrid cell mvt
+        } else if (map[playerRow][playerCell] == "X") {
+                playerCell--;    
         } else {
             playerDiv.style.left = (pixelsFromLeft + 22) + "px";
         }
@@ -119,10 +131,7 @@ document.addEventListener("keydown", function (event) {
     // push B boxes
 
 
-    // make boxes next to X not move
 
-    // 
-    
     console.log("playerPosition:", map[playerRow][playerCell])
 
     //  make barriers active
