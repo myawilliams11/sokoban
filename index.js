@@ -87,6 +87,9 @@ document.addEventListener("keydown", function (event) {
             // blocking hybrid cell mvt
         } else if (map[playerRow][playerCell] == "X") {
             playerRow++;
+            // move boxes
+        } else if (map[playerRow][playerCell] == "B") {
+                playerRow--;
         } else {
             playerDiv.style.top = (pixelsFromTop - 22) + "px";
         }     
@@ -99,6 +102,7 @@ document.addEventListener("keydown", function (event) {
             // blocking hybrid cell mvt
         } else if (map[playerRow][playerCell] == "X") {
             playerCell++; 
+            // move boxes***
         } else {
         playerDiv.style.left = (pixelsFromLeft - 22) + "px";  
         }
@@ -111,6 +115,7 @@ document.addEventListener("keydown", function (event) {
             // blocking hybrid cell mvt
         } else if (map[playerRow][playerCell] == "X") {
             playerRow++;        
+            // move boxes***
         } else {
         playerDiv.style.top = (pixelsFromTop + 22) + "px";
         }     
@@ -123,12 +128,12 @@ document.addEventListener("keydown", function (event) {
             // blocking hybrid cell mvt
         } else if (map[playerRow][playerCell] == "X") {
                 playerCell--;    
+                // move boxes***
         } else {
             playerDiv.style.left = (pixelsFromLeft + 22) + "px";
         }
     }
 
-    // push B boxes
 
 
 
